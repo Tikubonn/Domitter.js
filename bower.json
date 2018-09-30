@@ -1,0 +1,22 @@
+{
+  "name": "domitter",
+  "homepage": "https://github.com/tikubonn/domitter.js",
+  "authors": [
+    "tikubonn <https://twitter.com/tikubonn>"
+  ],
+  "description": "this is a pure javascript library that can fast omit multiple line texts.",
+  "main": "dist/domitter.js",
+  "keywords": [
+    "omission",
+    "pure",
+    "javascript"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
