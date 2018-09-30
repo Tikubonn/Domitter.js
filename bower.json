@@ -7,9 +7,11 @@
   "description": "this is a pure javascript library that can fast omit multiple line texts.",
   "main": "dist/domitter.js",
   "keywords": [
+    "domitter",
     "omission",
-    "pure",
-    "javascript"
+    "javascript",
+    "browser",
+    "library"
   ],
   "license": "MIT",
   "ignore": [
