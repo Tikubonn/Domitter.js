@@ -1,6 +1,6 @@
 {
   "name": "domitter",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "this is a pure javascript library that can fast omit multiple line texts.",
   "main": "dist/js/domitter.js",
   "scripts": {
