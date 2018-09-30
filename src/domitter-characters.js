@@ -49,15 +49,15 @@ function showDomitterCharacters (instance){
  */
 
 function hidesDomitterCharacters (instance){
-	var index = instance.__caches.length;
-	while (index){
-		index = (index-1)|0;
-		var cache = instance.__caches[index];
-		if (showpDomitterCharacter(cache)){
-			return makeDomitterSpan(instance.__caches, index +1, instance.__caches.length);
-		}
-	}
-	return makeDomitterSpan(instance.__caches, 0, instance.__caches.length);
+  var index = instance.__caches.length;
+  while (index){
+    index = (index-1)|0;
+    var cache = instance.__caches[index];
+    if (showpDomitterCharacter(cache)){
+      return makeDomitterSpan(instance.__caches, index +1, instance.__caches.length);
+    }
+  }
+  return makeDomitterSpan(instance.__caches, 0, instance.__caches.length);
 }
 
 /**
@@ -78,15 +78,15 @@ function hidesDomitterCharacters (instance){
  */
 
 function showsDomitterCharacters (instance){
-	var index = 0;
-	while (index < instance.__caches.length){
-		var cache = instance.__caches[index];
-		if (hidepDomitterCharacter(cache)){
-			return makeDomitterSpan(instance.__caches, 0, index);
-		}
-		index = (index+1)|0;
-	}
-	return makeDomitterSpan(instance.__caches, 0, instance.__caches.length);
+  var index = 0;
+  while (index < instance.__caches.length){
+    var cache = instance.__caches[index];
+    if (hidepDomitterCharacter(cache)){
+      return makeDomitterSpan(instance.__caches, 0, index);
+    }
+    index = (index+1)|0;
+  }
+  return makeDomitterSpan(instance.__caches, 0, instance.__caches.length);
 }
 
 /**

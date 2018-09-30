@@ -83,9 +83,9 @@ Domitter.prototype.formInText = function (builder, target){
   //addsDomitterBuilder(builder2, target.data);
   addsDomitterBuilderExperiments(builder2, target.data, this.__options);
   extendDomitterCacheCollection(
-		domitterRootBuilderCharacters(builder),
-		domitterBuilderCharacters(builder2));
-	target.parentNode.replaceChild(
+    domitterRootBuilderCharacters(builder),
+    domitterBuilderCharacters(builder2));
+  target.parentNode.replaceChild(
     domitterContainerDom(
       domitterBuilderContainer(builder2)),
     target);
@@ -135,7 +135,7 @@ Domitter.prototype.omit1 = function (){
   updateDomitterEllipsis(this.__ellipsis);
   updateDomitterContainer(this.__container);
   //updateDomitterCharacters(this.__characters);
-	updateDomitterCharacterCollection(this.__characters);
+  updateDomitterCharacterCollection(this.__characters);
 };
 
 Domitter.prototype.omit2 = function (){
@@ -146,238 +146,238 @@ Domitter.prototype.omit2 = function (){
 };
 
 /* Domitter.prototype.updateEllipsis = function (){
-	var hides = hidesDomitterCharacters(this.__characters); // optimize later
-	if (hides.length == 0){
+  var hides = hidesDomitterCharacters(this.__characters); // optimize later
+  if (hides.length == 0){
     hideDomitterEllipsis(this.__ellipsis);
-	}
-	else {
-		var shows = showsDomitterCharacters(this.__characters); // optimize later
-		if (shows.length == 0){
-			hideDomitterEllipsis(this.__ellipsis);
-		}
-		else {
-			showDomitterEllipsis(this.__ellipsis);
-			var index = shows.length;
-			while (index){
-				index = (index-1)|0;
-				var show = shows[index];
-				if (/\s+/.test(domitterCharacterDom(show).data)){
-					hideDomitterCharacter(show);
-				}
-				else 
-				if (domitterEllipsisOuterWidth(this.__ellipsis) <= 
-						(domitterRootContainerLeft(this.__container) + 
-						 domitterRootContainerInnerWidth(this.__container) - 
-						 domitterCharacterRight(show))){
-					setDomitterEllipsisBottom(
-						this.__ellipsis, 
-						domitterCharacterBottom(show) + 
-						domitterCharacterLineMargin(show) - 
-						domitterRootContainerTop(this.__container));
-					setDomitterEllipsisLeft(
-						this.__ellipsis, 
-						domitterCharacterRight(show) - 
-						domitterRootContainerLeft(this.__container));
-					break;
-				}
-				else {
-					hideDomitterCharacter(show);
-				}
-			}
-		}		
-	}
+  }
+  else {
+    var shows = showsDomitterCharacters(this.__characters); // optimize later
+    if (shows.length == 0){
+      hideDomitterEllipsis(this.__ellipsis);
+    }
+    else {
+      showDomitterEllipsis(this.__ellipsis);
+      var index = shows.length;
+      while (index){
+        index = (index-1)|0;
+        var show = shows[index];
+        if (/\s+/.test(domitterCharacterDom(show).data)){
+          hideDomitterCharacter(show);
+        }
+        else 
+        if (domitterEllipsisOuterWidth(this.__ellipsis) <= 
+            (domitterRootContainerLeft(this.__container) + 
+             domitterRootContainerInnerWidth(this.__container) - 
+             domitterCharacterRight(show))){
+          setDomitterEllipsisBottom(
+            this.__ellipsis, 
+            domitterCharacterBottom(show) + 
+            domitterCharacterLineMargin(show) - 
+            domitterRootContainerTop(this.__container));
+          setDomitterEllipsisLeft(
+            this.__ellipsis, 
+            domitterCharacterRight(show) - 
+            domitterRootContainerLeft(this.__container));
+          break;
+        }
+        else {
+          hideDomitterCharacter(show);
+        }
+      }
+    }    
+  }
   this.__status = true;
 }; */
 
 /* Domitter.prototype.updateEllipsis = function (){
-	var hides = hidesDomitterCharacters(this.__characters); // optimize later
-	if (domitterSpanLength(hides) == 0){
+  var hides = hidesDomitterCharacters(this.__characters); // optimize later
+  if (domitterSpanLength(hides) == 0){
     hideDomitterEllipsis(this.__ellipsis);
-	}
-	else {
-		var shows = showsDomitterCharacters(this.__characters); // optimize later
-		if (domitterSpanLength(shows) == 0){
-			hideDomitterEllipsis(this.__ellipsis);
-		}
-		else {
-			showDomitterEllipsis(this.__ellipsis);
-			var index = domitterSpanLength(shows);
-			while (index){
-				index = (index-1)|0;
-				var show = getDomitterSpan(shows, index);
-				if (/\s+/.test(domitterCharacterDom(show).data)){
-					hideDomitterCharacter(show);
-				}
-				else 
-				if (domitterEllipsisOuterWidth(this.__ellipsis) <= 
-						(domitterRootContainerLeft(this.__container) + 
-						 domitterRootContainerInnerWidth(this.__container) - 
-						 domitterCharacterRight(show))){
-					setDomitterEllipsisBottom(
-						this.__ellipsis, 
-						domitterCharacterBottom(show) + 
-						domitterCharacterLineMargin(show) - 
-						domitterRootContainerTop(this.__container));
-					setDomitterEllipsisLeft(
-						this.__ellipsis, 
-						domitterCharacterRight(show) - 
-						domitterRootContainerLeft(this.__container));
-					break;
-				}
-				else {
-					hideDomitterCharacter(show);
-				}
-			}
-		}		
-	}
+  }
+  else {
+    var shows = showsDomitterCharacters(this.__characters); // optimize later
+    if (domitterSpanLength(shows) == 0){
+      hideDomitterEllipsis(this.__ellipsis);
+    }
+    else {
+      showDomitterEllipsis(this.__ellipsis);
+      var index = domitterSpanLength(shows);
+      while (index){
+        index = (index-1)|0;
+        var show = getDomitterSpan(shows, index);
+        if (/\s+/.test(domitterCharacterDom(show).data)){
+          hideDomitterCharacter(show);
+        }
+        else 
+        if (domitterEllipsisOuterWidth(this.__ellipsis) <= 
+            (domitterRootContainerLeft(this.__container) + 
+             domitterRootContainerInnerWidth(this.__container) - 
+             domitterCharacterRight(show))){
+          setDomitterEllipsisBottom(
+            this.__ellipsis, 
+            domitterCharacterBottom(show) + 
+            domitterCharacterLineMargin(show) - 
+            domitterRootContainerTop(this.__container));
+          setDomitterEllipsisLeft(
+            this.__ellipsis, 
+            domitterCharacterRight(show) - 
+            domitterRootContainerLeft(this.__container));
+          break;
+        }
+        else {
+          hideDomitterCharacter(show);
+        }
+      }
+    }    
+  }
   this.__status = true;
 }; */
 
 Domitter.prototype.updateEllipsis = function (){
-	var hides = hidesDomitterCharacterCollection(this.__characters);
-	if (domitterCollectionSpanLength(hides) == 0){
+  var hides = hidesDomitterCharacterCollection(this.__characters);
+  if (domitterCollectionSpanLength(hides) == 0){
     hideDomitterEllipsis(this.__ellipsis);
-	}
-	else {
-		var shows = showsDomitterCharacterCollection(this.__characters);
-		if (domitterCollectionSpanLength(shows) == 0){
-			hideDomitterEllipsis(this.__ellipsis);
-		}
-		else {
-			showDomitterEllipsis(this.__ellipsis);
-			var index = domitterCollectionSpanEnd(shows);
-			var beginning = domitterCollectionSpanBeginning(shows);
-			while (beginning < index){
-				index = (index-1)|0;
-				if (/\s+/.test(domitterCharacterCollectionDom(this.__characters, index).data)){
-					hideDomitterCharacterCollection(this.__characters, index);
-				}
-				else 
-				if (domitterEllipsisOuterWidth(this.__ellipsis) <= 
-						(domitterRootContainerLeft(this.__container) + 
-						 domitterRootContainerInnerWidth(this.__container) - 
-						 domitterCharacterCollectionRight(this.__characters, index))){
-					setDomitterEllipsisBottom(
-						this.__ellipsis, 
-						domitterCharacterCollectionBottom(this.__characters, index) + 
-						domitterCharacterCollectionLineMargin(this.__characters, index) -
-						domitterRootContainerTop(this.__container));
-					setDomitterEllipsisLeft(
-						this.__ellipsis, 
-						domitterCharacterCollectionRight(this.__characters, index) - 
-						domitterRootContainerLeft(this.__container));
-					break;
-				}
-				else {
-					hideDomitterCharacterCollection(this.__characters, index);
-				}
-			}
-		}		
-	}
+  }
+  else {
+    var shows = showsDomitterCharacterCollection(this.__characters);
+    if (domitterCollectionSpanLength(shows) == 0){
+      hideDomitterEllipsis(this.__ellipsis);
+    }
+    else {
+      showDomitterEllipsis(this.__ellipsis);
+      var index = domitterCollectionSpanEnd(shows);
+      var beginning = domitterCollectionSpanBeginning(shows);
+      while (beginning < index){
+        index = (index-1)|0;
+        if (/\s+/.test(domitterCharacterCollectionDom(this.__characters, index).data)){
+          hideDomitterCharacterCollection(this.__characters, index);
+        }
+        else 
+        if (domitterEllipsisOuterWidth(this.__ellipsis) <= 
+            (domitterRootContainerLeft(this.__container) + 
+             domitterRootContainerInnerWidth(this.__container) - 
+             domitterCharacterCollectionRight(this.__characters, index))){
+          setDomitterEllipsisBottom(
+            this.__ellipsis, 
+            domitterCharacterCollectionBottom(this.__characters, index) + 
+            domitterCharacterCollectionLineMargin(this.__characters, index) -
+            domitterRootContainerTop(this.__container));
+          setDomitterEllipsisLeft(
+            this.__ellipsis, 
+            domitterCharacterCollectionRight(this.__characters, index) - 
+            domitterRootContainerLeft(this.__container));
+          break;
+        }
+        else {
+          hideDomitterCharacterCollection(this.__characters, index);
+        }
+      }
+    }    
+  }
   this.__status = true;
 };
 
 /* Domitter.prototype.updateContainer = function (){
-	var hides = hidesDomitterCharacters(this.__characters); // optimize later
-	if (hides.length == 0){
+  var hides = hidesDomitterCharacters(this.__characters); // optimize later
+  if (hides.length == 0){
     setDomitterRootContainerWidth(this.__container, null);
     setDomitterRootContainerHeight(this.__container, null);
-	}
-	else {
-		var shows = showsDomitterCharacters(this.__characters); // optimize later
-		if (shows.length == 0){
-			setDomitterRootContainerWidth(this.__container, null);
-			setDomitterRootContainerHeight(this.__container, null);
-		}
-		else {
-			var index = 1;
-			//var bottom = domitterCharacterBottom(shows[0]);
-			var bottom = 
-					domitterCharacterBottom(shows[0]) + 
-					domitterCharacterLineMargin(shows[0]);
-			while (index < shows.length){
-				var show = shows[index];
-				//bottom = Math.max(bottom, domitterCharacterBottom(show));
-				bottom = Math.max(
-					bottom, 
-					domitterCharacterBottom(show) + 
-					domitterCharacterLineMargin(show));
-				index = (index+1)|0;
-			}
-			var top = domitterRootContainerTop(this.__container);
-			setDomitterRootContainerWidth(this.__container, null);
-			setDomitterRootContainerHeight(this.__container, bottom - top);
-		}		
-	}
+  }
+  else {
+    var shows = showsDomitterCharacters(this.__characters); // optimize later
+    if (shows.length == 0){
+      setDomitterRootContainerWidth(this.__container, null);
+      setDomitterRootContainerHeight(this.__container, null);
+    }
+    else {
+      var index = 1;
+      //var bottom = domitterCharacterBottom(shows[0]);
+      var bottom = 
+          domitterCharacterBottom(shows[0]) + 
+          domitterCharacterLineMargin(shows[0]);
+      while (index < shows.length){
+        var show = shows[index];
+        //bottom = Math.max(bottom, domitterCharacterBottom(show));
+        bottom = Math.max(
+          bottom, 
+          domitterCharacterBottom(show) + 
+          domitterCharacterLineMargin(show));
+        index = (index+1)|0;
+      }
+      var top = domitterRootContainerTop(this.__container);
+      setDomitterRootContainerWidth(this.__container, null);
+      setDomitterRootContainerHeight(this.__container, bottom - top);
+    }    
+  }
   this.__status = true;
 }; */
 
 /* Domitter.prototype.updateContainer = function (){
-	var hides = hidesDomitterCharacters(this.__characters); // optimize later
-	if (domitterSpanLength(hides) == 0){
+  var hides = hidesDomitterCharacters(this.__characters); // optimize later
+  if (domitterSpanLength(hides) == 0){
     setDomitterRootContainerWidth(this.__container, null);
     setDomitterRootContainerHeight(this.__container, null);
-	}
-	else {
-		var shows = showsDomitterCharacters(this.__characters); // optimize later
-		if (domitterSpanLength(shows) == 0){
-			setDomitterRootContainerWidth(this.__container, null);
-			setDomitterRootContainerHeight(this.__container, null);
-		}
-		else {
-			var index = 1;
-			//var bottom = domitterCharacterBottom(shows[0]);
-			var bottom = 
-					domitterCharacterBottom(getDomitterSpan(shows, 0)) + 
-					domitterCharacterLineMargin(getDomitterSpan(shows, 0));
-			var length = domitterSpanLength(shows);
-			while (index < length){
-				var show = getDomitterSpan(shows, index);
-				//bottom = Math.max(bottom, domitterCharacterBottom(show));
-				bottom = Math.max(
-					bottom, 
-					domitterCharacterBottom(show) + 
-					domitterCharacterLineMargin(show));
-				index = (index+1)|0;
-			}
-			var top = domitterRootContainerTop(this.__container);
-			setDomitterRootContainerWidth(this.__container, null);
-			setDomitterRootContainerHeight(this.__container, bottom - top);
-		}		
-	}
+  }
+  else {
+    var shows = showsDomitterCharacters(this.__characters); // optimize later
+    if (domitterSpanLength(shows) == 0){
+      setDomitterRootContainerWidth(this.__container, null);
+      setDomitterRootContainerHeight(this.__container, null);
+    }
+    else {
+      var index = 1;
+      //var bottom = domitterCharacterBottom(shows[0]);
+      var bottom = 
+          domitterCharacterBottom(getDomitterSpan(shows, 0)) + 
+          domitterCharacterLineMargin(getDomitterSpan(shows, 0));
+      var length = domitterSpanLength(shows);
+      while (index < length){
+        var show = getDomitterSpan(shows, index);
+        //bottom = Math.max(bottom, domitterCharacterBottom(show));
+        bottom = Math.max(
+          bottom, 
+          domitterCharacterBottom(show) + 
+          domitterCharacterLineMargin(show));
+        index = (index+1)|0;
+      }
+      var top = domitterRootContainerTop(this.__container);
+      setDomitterRootContainerWidth(this.__container, null);
+      setDomitterRootContainerHeight(this.__container, bottom - top);
+    }    
+  }
   this.__status = true;
 }; */
 
 Domitter.prototype.updateContainer = function (){
-	var hides = hidesDomitterCharacterCollection(this.__characters); // optimize later
-	if (domitterCollectionSpanLength(hides) == 0){
+  var hides = hidesDomitterCharacterCollection(this.__characters); // optimize later
+  if (domitterCollectionSpanLength(hides) == 0){
     setDomitterRootContainerWidth(this.__container, null);
     setDomitterRootContainerHeight(this.__container, null);
-	}
-	else {
-		var shows = showsDomitterCharacterCollection(this.__characters); // optimize later
-		if (domitterCollectionSpanLength(shows) == 0){
-			setDomitterRootContainerWidth(this.__container, null);
-			setDomitterRootContainerHeight(this.__container, null);
-		}
-		else {
-			var index = 1;
-			var end = domitterCollectionSpanEnd(shows);
-			var bottom = 
-					domitterCharacterCollectionBottom(this.__characters, 0) + 
-					domitterCharacterCollectionLineMargin(this.__characters, 0);
-			while (index < end){
-				bottom = Math.max(
-					bottom, 
-					domitterCharacterCollectionBottom(this.__characters, index) + 
-					domitterCharacterCollectionLineMargin(this.__characters, index));
-				index = (index+1)|0;
-			}
-			var top = domitterRootContainerTop(this.__container);
-			setDomitterRootContainerWidth(this.__container, null);
-			setDomitterRootContainerHeight(this.__container, bottom - top);
-		}
-	}
+  }
+  else {
+    var shows = showsDomitterCharacterCollection(this.__characters); // optimize later
+    if (domitterCollectionSpanLength(shows) == 0){
+      setDomitterRootContainerWidth(this.__container, null);
+      setDomitterRootContainerHeight(this.__container, null);
+    }
+    else {
+      var index = 1;
+      var end = domitterCollectionSpanEnd(shows);
+      var bottom = 
+          domitterCharacterCollectionBottom(this.__characters, 0) + 
+          domitterCharacterCollectionLineMargin(this.__characters, 0);
+      while (index < end){
+        bottom = Math.max(
+          bottom, 
+          domitterCharacterCollectionBottom(this.__characters, index) + 
+          domitterCharacterCollectionLineMargin(this.__characters, index));
+        index = (index+1)|0;
+      }
+      var top = domitterRootContainerTop(this.__container);
+      setDomitterRootContainerWidth(this.__container, null);
+      setDomitterRootContainerHeight(this.__container, bottom - top);
+    }
+  }
   this.__status = true;
 };
 
@@ -394,13 +394,13 @@ Domitter.prototype.omitMain = function (){
 }
 
 Domitter.prototype["omit"] = function (){
-	if (this.__options["experiments"] &&
-			this.__options["experiments"]["useRequestAnimationFrame"]){
-		requestAnimationFrame(this.omitMain.bind(this));
-	}
-	else {
-		this.omitMain();
-	}
+  if (this.__options["experiments"] &&
+      this.__options["experiments"]["useRequestAnimationFrame"]){
+    requestAnimationFrame(this.omitMain.bind(this));
+  }
+  else {
+    this.omitMain();
+  }
 };
 
 Domitter.prototype.unomit1 = function (){
@@ -424,13 +424,13 @@ Domitter.prototype.unomitMain = function (){
 };
 
 Domitter.prototype["unomit"] = function (){
-	if (this.__options["experiments"] &&
-			this.__options["experiments"]["useRequestAnimationFrame"]){
-		requestAnimationFrame(this.unomitMain.bind(this));
-	}
-	else {
-		this.unomitMain();
-	}
+  if (this.__options["experiments"] &&
+      this.__options["experiments"]["useRequestAnimationFrame"]){
+    requestAnimationFrame(this.unomitMain.bind(this));
+  }
+  else {
+    this.unomitMain();
+  }
 };
 
 Domitter.prototype["toggle"] = function (){

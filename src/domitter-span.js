@@ -7,11 +7,11 @@
  */
 
 function makeDomitterSpan (sequence, beginning, end){
-	return {
-		__sequence: sequence,
-		__beginning: beginning,
-		__end: end
-	};
+  return {
+    __sequence: sequence,
+    __beginning: beginning,
+    __end: end
+  };
 }
 
 /**
@@ -19,7 +19,7 @@ function makeDomitterSpan (sequence, beginning, end){
  */
 
 function domitterSpanLength (instance){
-	return instance.__end - instance.__beginning;
+  return instance.__end - instance.__beginning;
 }
 
 /**
@@ -29,7 +29,7 @@ function domitterSpanLength (instance){
  */
 
 function setDomitterSpan (instance, index, value){
-	instance.__sequence[instance.__beginning + index] = value;
+  instance.__sequence[instance.__beginning + index] = value;
 }
 
 /**
@@ -38,5 +38,5 @@ function setDomitterSpan (instance, index, value){
  */
 
 function getDomitterSpan (instance, index){
-	return instance.__sequence[instance.__beginning + index];
+  return instance.__sequence[instance.__beginning + index];
 }

@@ -23,11 +23,11 @@ var domitterCharacterCollectionLineMargin = domitterCacheCollectionLineMargin;
  */
 
 function makeDomitterCharacterCollectionDom (character){
-	var span = document.createElement("span");
-	var text = document.createTextNode(character);
-	span.classList.add("domitter-character");
-	span.appendChild(text);
-	return span;
+  var span = document.createElement("span");
+  var text = document.createTextNode(character);
+  span.classList.add("domitter-character");
+  span.appendChild(text);
+  return span;
 }
 
 /**
@@ -37,8 +37,8 @@ function makeDomitterCharacterCollectionDom (character){
  */
 
 function showDomitterCharacterCollection (instance, index){
-	var dom = domitterCharacterCollectionDom(instance, index);
-	dom.classList.remove("domitter-character-hidden");
+  var dom = domitterCharacterCollectionDom(instance, index);
+  dom.classList.remove("domitter-character-hidden");
 }
 
 /**
@@ -48,8 +48,8 @@ function showDomitterCharacterCollection (instance, index){
  */
 
 function hideDomitterCharacterCollection (instance, index){
-	var dom = domitterCharacterCollectionDom(instance, index);
-	dom.classList.add("domitter-character-hidden");
+  var dom = domitterCharacterCollectionDom(instance, index);
+  dom.classList.add("domitter-character-hidden");
 }
 
 /**
@@ -58,12 +58,12 @@ function hideDomitterCharacterCollection (instance, index){
  */
 
 function showAllDomitterCharacterCollection (instance){
-	var index = 0;
-	var length = domitterCharacterCollectionLength(instance);
-	while (index < length){
-		showDomitterCharacterCollection(instance, index);
-		index = (index+1)|0;
-	}
+  var index = 0;
+  var length = domitterCharacterCollectionLength(instance);
+  while (index < length){
+    showDomitterCharacterCollection(instance, index);
+    index = (index+1)|0;
+  }
 }
 
 /**
@@ -72,12 +72,12 @@ function showAllDomitterCharacterCollection (instance){
  */
 
 function hideAllDomitterCharacterCollection (instance){
-	var index = 0;
-	var length = domitterCharacterCollectionLength(instance);
-	while (index < length){
-		hideDomitterCharacterCollection(instance, index);
-		index = (index+1)|0;
-	}
+  var index = 0;
+  var length = domitterCharacterCollectionLength(instance);
+  while (index < length){
+    hideDomitterCharacterCollection(instance, index);
+    index = (index+1)|0;
+  }
 }
 
 /**
@@ -87,8 +87,8 @@ function hideAllDomitterCharacterCollection (instance){
  */
 
 function showpDomitterCharacterCollection (instance, index){
-	var dom = domitterCharacterCollectionDom(instance, index);
-	return dom.classList.contains("domitter-character-hidden") == false;
+  var dom = domitterCharacterCollectionDom(instance, index);
+  return dom.classList.contains("domitter-character-hidden") == false;
 }
 
 /**
@@ -98,8 +98,8 @@ function showpDomitterCharacterCollection (instance, index){
  */
 
 function hidepDomitterCharacterCollection (instance, index){
-	var dom = domitterCharacterCollectionDom(instance, index);
-	return dom.classList.contains("domitter-character-hidden");
+  var dom = domitterCharacterCollectionDom(instance, index);
+  return dom.classList.contains("domitter-character-hidden");
 }
 
 /**
@@ -108,8 +108,8 @@ function hidepDomitterCharacterCollection (instance, index){
  */
 
 function showAllpDomitterCharacterCollection (instance){
-	var length = domitterCharacterCollectionLength(instance);
-	return 0 < length && showpDomitterCharacterCollection(instance, length -1);
+  var length = domitterCharacterCollectionLength(instance);
+  return 0 < length && showpDomitterCharacterCollection(instance, length -1);
 }
 
 /**
@@ -118,8 +118,8 @@ function showAllpDomitterCharacterCollection (instance){
  */
 
 function hideAllpDomitterCharacterCollection (instance){
-	var length = domitterCharacterCollectionLength(instance);
-	return 0 < length && hidepDomitterCharacterCollection(instance, 0);
+  var length = domitterCharacterCollectionLength(instance);
+  return 0 < length && hidepDomitterCharacterCollection(instance, 0);
 }
 
 /**
@@ -128,15 +128,15 @@ function hideAllpDomitterCharacterCollection (instance){
  */
 
 function showsDomitterCharacterCollection (instance){
-	var index = 0;
-	var length = domitterCacheCollectionLength(instance);
-	while (index < length){
-		if (hidepDomitterCharacterCollection(instance, index)){
-			return makeDomitterCollectionSpan(0, index);
-		}
-		index = (index+1)|0;
-	}
-	return makeDomitterCollectionSpan(0, length);
+  var index = 0;
+  var length = domitterCacheCollectionLength(instance);
+  while (index < length){
+    if (hidepDomitterCharacterCollection(instance, index)){
+      return makeDomitterCollectionSpan(0, index);
+    }
+    index = (index+1)|0;
+  }
+  return makeDomitterCollectionSpan(0, length);
 }
 
 /**
@@ -145,15 +145,15 @@ function showsDomitterCharacterCollection (instance){
  */
 
 function hidesDomitterCharacterCollection (instance){
-	var length = domitterCacheCollectionLength(instance);
-	var index = length;
-	while (0 < index){
-		index = (index-1)|0;
-		if (showpDomitterCharacterCollection(instance, index)){
-			return makeDomitterCollectionSpan(index +1, length);
-		}
-	}
-	return makeDomitterCollectionSpan(0, length);
+  var length = domitterCacheCollectionLength(instance);
+  var index = length;
+  while (0 < index){
+    index = (index-1)|0;
+    if (showpDomitterCharacterCollection(instance, index)){
+      return makeDomitterCollectionSpan(index +1, length);
+    }
+  }
+  return makeDomitterCollectionSpan(0, length);
 }
 
 /* export */

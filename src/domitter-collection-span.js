@@ -5,11 +5,11 @@
  * @return {Object}
  */
 
-function makeDomitterCollectionSpan (beginning, end){	
-	return {
-		__beginning: beginning,
-		__end: end
-	};
+function makeDomitterCollectionSpan (beginning, end){  
+  return {
+    __beginning: beginning,
+    __end: end
+  };
 }
 
 /**
@@ -18,7 +18,7 @@ function makeDomitterCollectionSpan (beginning, end){
  */
 
 function domitterCollectionSpanLength (instance){
-	return instance.__end - instance.__beginning;
+  return instance.__end - instance.__beginning;
 }
 
 /**
@@ -27,7 +27,7 @@ function domitterCollectionSpanLength (instance){
  */
 
 function domitterCollectionSpanBeginning (instance){
-	return instance.__beginning;
+  return instance.__beginning;
 }
 
 /**
@@ -36,5 +36,5 @@ function domitterCollectionSpanBeginning (instance){
  */
 
 function domitterCollectionSpanEnd (instance){
-	return instance.__end;
+  return instance.__end;
 }

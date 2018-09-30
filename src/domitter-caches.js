@@ -35,8 +35,8 @@ function addDomitterCaches (instance, cache){
  */
 
 function addsDomitterCaches (instance, caches){
-	// instance.__caches = instance.__caches.concat(caches);
-	Array.prototype.push.apply(instance.__caches, caches);
+  // instance.__caches = instance.__caches.concat(caches);
+  Array.prototype.push.apply(instance.__caches, caches);
 }
 
 /**

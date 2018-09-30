@@ -15,7 +15,7 @@ function makeDomitterCharacter (character){
  */
 
 function makeDomitterCharacterDom (character){
-	var span = document.createElement("span");
+  var span = document.createElement("span");
   var text = document.createTextNode(character);
   span.classList.add("domitter-character");
   span.appendChild(text);

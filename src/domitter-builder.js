@@ -7,7 +7,7 @@ function makeDomitterBuilder (){
   return {
     __container: makeDomitterContainer(),
     // __characters: makeDomitterCharacters()
-		__characters: makeDomitterCharacterCollection()
+    __characters: makeDomitterCharacterCollection()
   };
 }
 
@@ -39,14 +39,14 @@ function domitterBuilderCharacters (instance){
   var char = makeDomitterCharacter(character);
   domitterContainerDom(instance.__container)
     .appendChild(domitterCharacterDom(char));
-	addDomitterCharacters(instance.__characters, char);
+  addDomitterCharacters(instance.__characters, char);
 } */
 
 function addDomitterBuilder (instance, character){
   var dom = makeDomitterCharacterCollectionDom(character);
   domitterContainerDom(instance.__container)
     .appendChild(domitterCharacterDom(dom));
-	addDomitterCharacterCollection(instance.__characters, dom);
+  addDomitterCharacterCollection(instance.__characters, dom);
 }
 
 /**
@@ -84,10 +84,10 @@ function addsDomitterBuilderExperiments (instance, characters, options){
     var doms = document.createDocumentFragment();
     var index = 0;
     while (index < characters.length){
-			var dom = makeDomitterCharacterCollectionDom(characters.slice(index, index + resolution));
-			doms.appendChild(dom);
-			addDomitterCharacterCollection(instance.__characters, dom);
-			index = (index+1)|0;
+      var dom = makeDomitterCharacterCollectionDom(characters.slice(index, index + resolution));
+      doms.appendChild(dom);
+      addDomitterCharacterCollection(instance.__characters, dom);
+      index = (index+1)|0;
     }
     domitterContainerDom(instance.__container).appendChild(doms);
   }
@@ -122,7 +122,7 @@ function addsDomitterBuilderExperiments (instance, characters, options){
   var index = 0;
   while (index < characters.length){
     var char = makeDomitterCharacter(characters[index]);
-		chars[index] = char;
+    chars[index] = char;
     doms.appendChild(domitterCharacterDom(char));
     index = (index+1)|0;
   }
@@ -131,13 +131,13 @@ function addsDomitterBuilderExperiments (instance, characters, options){
 } */
 
 function addsDomitterBuilder (instance, characters){
-	var doms = document.createDocumentFragment();
-	var index = 0;
-	while (index < characters.length){
-		var dom = makeDomitterCharacterCollectionDom(characters[index]);
-		doms.appendChild(dom);
-		addDomitterCharacterCollection(instance.__characters, dom);
-		index = (index+1)|0;
-	}
-	domitterContainerDom(instance.__container).appendChild(doms);
+  var doms = document.createDocumentFragment();
+  var index = 0;
+  while (index < characters.length){
+    var dom = makeDomitterCharacterCollectionDom(characters[index]);
+    doms.appendChild(dom);
+    addDomitterCharacterCollection(instance.__characters, dom);
+    index = (index+1)|0;
+  }
+  domitterContainerDom(instance.__container).appendChild(doms);
 }

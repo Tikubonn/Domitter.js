@@ -5,13 +5,13 @@
  */
 
 function DomitterLines (count){
-	
-	if (count < 1){
-		throw new Error("arguments value must be more than 1.");
-	}
-	
+  
+  if (count < 1){
+    throw new Error("arguments value must be more than 1.");
+  }
+  
   this.__count = count;
-	
+  
 }
 
 DomitterLines.prototype = 
@@ -48,7 +48,7 @@ DomitterLines.prototype =
 }; */
 
 DomitterLines.prototype["omit"] = function (characters){
-	var length = domitterCharacterCollectionLength(characters);
+  var length = domitterCharacterCollectionLength(characters);
   if (0 < length){
     var index = 1;
     var count = this.__count;
@@ -63,7 +63,7 @@ DomitterLines.prototype["omit"] = function (characters){
         showDomitterCharacterCollection(characters, index);
       }
       else {
-				hideDomitterCharacterCollection(characters, index);
+        hideDomitterCharacterCollection(characters, index);
       }
       left = domitterCharacterCollectionLeft(characters, index);
       index = (index+1)|0;

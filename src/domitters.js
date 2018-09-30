@@ -24,9 +24,9 @@ function Domitters (targets, height, ellipsis, options){
         }
       });
   }
-	
+  
   else if (targets instanceof NodeList || 
-					 targets instanceof HTMLCollection){
+           targets instanceof HTMLCollection){
     targets = Array.prototype.slice.call(targets).map(
       function (dom){
         return new Domitter(dom, height, ellipsis, options);
@@ -40,14 +40,14 @@ function Domitters (targets, height, ellipsis, options){
       });
   }
   
-	if (options == undefined){
-		options = {};
-	}
-	
+  if (options == undefined){
+    options = {};
+  }
+  
   /* construct members */
   
   this.__targets = targets;
-	this.__options = options;
+  this.__options = options;
   
 }
 
@@ -82,13 +82,13 @@ Domitters.prototype.omitMain = function (){
 };
 
 Domitters.prototype["omit"] = function (){
-	if (this.__options["experiments"] &&
-		 	this.__options["experiments"]["useRequestAnimationFrame"]){
-		requestAnimationFrame(this.omitMain.bind(this));
-	}
-	else {
-		this.omitMain();
-	}
+  if (this.__options["experiments"] &&
+       this.__options["experiments"]["useRequestAnimationFrame"]){
+    requestAnimationFrame(this.omitMain.bind(this));
+  }
+  else {
+    this.omitMain();
+  }
 };
 
 Domitters.prototype.unomit1 = function (){
@@ -113,13 +113,13 @@ Domitters.prototype.unomitMain = function (){
 };
 
 Domitters.prototype["unomit"] = function (){
-	if (this.__options["experiments"] &&
-		 	this.__options["experiments"]["useRequestAnimationFrame"]){
-		requestAnimationFrame(this.unomitMain.bind(this));
-	}
-	else {
-		this.unomitMain();
-	}
+  if (this.__options["experiments"] &&
+       this.__options["experiments"]["useRequestAnimationFrame"]){
+    requestAnimationFrame(this.unomitMain.bind(this));
+  }
+  else {
+    this.unomitMain();
+  }
 };
 
 Domitters.prototype.updateMain = function (){
@@ -162,13 +162,13 @@ Domitters.prototype.updateMain = function (){
 };
 
 Domitters.prototype["update"] = function (){
-	if (this.__options["experiments"] &&
-		 	this.__options["experiments"]["useRequestAnimationFrame"]){
-		requestAnimationFrame(this.updateMain.bind(this));
-	}
-	else {
-		this.updateMain();
-	}
+  if (this.__options["experiments"] &&
+       this.__options["experiments"]["useRequestAnimationFrame"]){
+    requestAnimationFrame(this.updateMain.bind(this));
+  }
+  else {
+    this.updateMain();
+  }
 };
 
 Domitters.prototype.toggleMain = function (){
@@ -211,13 +211,13 @@ Domitters.prototype.toggleMain = function (){
 };
 
 Domitters.prototype["toggle"] = function (){
-	if (this.__options["experiments"] &&
-		 	this.__options["experiments"]["useRequestAnimationFrame"]){
-		requestAnimationFrame(this.toggleMain.bind(this));
-	}
-	else {
-		this.toggleMain();
-	}
+  if (this.__options["experiments"] &&
+       this.__options["experiments"]["useRequestAnimationFrame"]){
+    requestAnimationFrame(this.toggleMain.bind(this));
+  }
+  else {
+    this.toggleMain();
+  }
 };
 
 /* export */
