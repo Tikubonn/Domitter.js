@@ -1,10 +1,12 @@
-# domitter.js
-Domitter.js is a small javascript plugin, it can omit a text content with keeping dom structure.
-this plugin derived from [Omitter.js](https://github.com/tikubonn/omitter.js).
 
-## Comming Soon
-Sorry everyone!  
-now developing it :D
+![](https://img.shields.io/badge/Version-1.0-orange.svg)
+![](https://img.shields.io/badge/License-MIT-blue.svg)
+
+# Domitter.js
+Domitter is a fast omission and reflow less JavaScript library.
+this library is faster than other library that edit Node.innerText many times. this library was written when some browsers has not supported text-overflow style. so now dont need this library for omission one line text. maybe.
+
+Document and some informations [here](https://domitter.tikubonn.jp).
 
 ### License 
-this plugin released under MIT license.
+Released under the MIT License.
