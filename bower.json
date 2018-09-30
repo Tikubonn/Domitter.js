@@ -5,7 +5,7 @@
     "tikubonn <https://twitter.com/tikubonn>"
   ],
   "description": "this is a pure javascript library that can fast omit multiple line texts.",
-  "main": "dist/domitter.js",
+  "main": "dist/js/domitter.js",
   "keywords": [
     "domitter",
     "omission",
